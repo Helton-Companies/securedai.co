@@ -305,6 +305,142 @@
           </div>
         </section>
 
+        <style>
+          .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+          }
+
+          .active,
+          .accordion:hover {
+            background-color: #ccc;
+          }
+
+          .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+          }
+        </style>
+
+        <section id="faq" class="pricing section">
+          <div class="container-sm">
+            <div class="pricing-inner section-inner">
+              <div class="pricing-header text-center">
+                <h2 class="section-title mt-0">FAQ</h2>
+                <p class="section-paragraph mb-0">Frequently Asked Questions</p>
+              </div>
+              <button class="accordion">
+                What is AI and how is it being used?
+              </button>
+              <div class="panel">
+                <p>
+                  AI is a technology that allows computers to learn from data,
+                  and then use that learning to make decisions. It is being used
+                  to help our software determine the best way to handle all of
+                  the data it receives from sensors and other devices.
+                </p>
+              </div>
+
+              <button class="accordion">Is my data safe?</button>
+              <div class="panel">
+                <p>
+                  Data security and privacy is of the utmost importance to us.
+                  We are currently trying several different methods of data
+                  encryption, and we are working with the best security experts
+                  in the world to ensure that your data is safe.
+                  <br /><br />
+                  Currently, we have two different implementations that we are
+                  working on. One involves routing the data through a Smart Home
+                  system (<a
+                    target="_blank"
+                    href="https://www.apple.com/home-app/"
+                    >Apple Home</a
+                  >,
+                  <a target="_blank" href="https://home.google.com/"
+                    >Google Home</a
+                  >, or
+                  <a href="https://alexa.amazon.com/" target="_blank"
+                    >Amazon Alexa</a
+                  >) to protect your data. These companies spend billions on
+                  security every year, and we are using their systems to protect
+                  your data. The other implementation involves using a special
+                  form of encryption that does not allow us to actually read
+                  your data (And therefore no-one else). This is a revolutonary
+                  new teechnology and we are hoping that this is the
+                  implementation that everyone can use going forward.
+                </p>
+              </div>
+
+              <button class="accordion">What data is being used?</button>
+              <div class="panel">
+                <p>
+                  We are using data from a variety of sources, including motion
+                  sensors, door sensors, cameras, location data, keypad data,
+                  and more. We are a modular-first system, so anything your want
+                  to add you can! Our system works best when it has access to
+                  the most amount of information possible.
+                </p>
+              </div>
+
+              <button class="accordion">Who created this?</button>
+              <div class="panel">
+                <p>
+                  Secured AI was created in 2022 by Tanner Helton, a student at
+                  the University of Kansas, as a senior capstone project.
+                </p>
+              </div>
+
+              <button class="accordion">
+                What is a threat probability scale?
+              </button>
+              <div class="panel">
+                <p>
+                  Threat probability scale is a term we use to describe the
+                  confidence level our software has when presented with data.
+                  The scale ranges from 0 to 100, with 0 being the lowest
+                  confidence and 100 being the highest confidence. The scale is
+                  used to determine the best course of action for the software
+                  to take.
+                  <br /><br />
+                  The user is able to set different thresholds for each level of
+                  confidence. For example, if the software has a confidence
+                  level of 50, the user can set the threshold to be 60. This
+                  means that if the software has a confidence level of 50, it
+                  will not take any action. However, if the software has a
+                  confidence level of 60, it will take the action that the user
+                  has set for that confidence level.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <script>
+          var acc = document.getElementsByClassName("accordion");
+          var i;
+
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+              this.classList.toggle("active");
+              var panel = this.nextElementSibling;
+              if (panel.style.display === "block") {
+                panel.style.display = "none";
+              } else {
+                panel.style.display = "block";
+              }
+            });
+          }
+        </script>
+
         <section class="cta section">
           <div class="container">
             <div class="cta-inner section-inner">
@@ -337,16 +473,20 @@
             </div>
             <ul class="footer-links list-reset">
               <li>
-                <a href="#">Contact</a>
+                <a target="_blank" href="https://airtable.com/shrYUFXAu0lzIjtKU"
+                  >Contact</a
+                >
               </li>
               <li>
-                <a href="#">About us</a>
+                <a href="#about">About us</a>
               </li>
               <li>
-                <a href="#">FAQ's</a>
+                <a href="#faq">FAQ's</a>
               </li>
               <li>
-                <a href="#">Support</a>
+                <a target="_blank" href="https://airtable.com/shrYUFXAu0lzIjtKU"
+                  >Support</a
+                >
               </li>
             </ul>
             <ul class="footer-social-links list-reset">
